@@ -1,0 +1,14 @@
+<h1>Questions Que</h1>
+
+<h3> <%= link_to "Add Question", new_question_path, class: "button" %></h3>
+
+<% @questions.each do |question| %>
+
+<ul>
+  <li>
+    <%= link_to question.title, question %>
+    <%= question.created_at.strftime("%B %e %Y") %>
+  </li>
+</ul>
+
+<% end %>
